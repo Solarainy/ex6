@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>介绍</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+		<style>
+			html{
+				height: 100%;
+			}
+			body{
+				background-image: url('img/background7.png');
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+			}
+			.hua7{
+				position: absolute;
+				width: 62.5%;
+				left:30%;
+				top: 30%;
+				cursor: pointer;
+			}
+			.home{
+				position: absolute;
+				width: 8%;
+				left: 46%;
+				top: 94%;
+			}
+			.left7{
+				position: absolute;
+				width: 6%;
+				left: 20%;
+				top: 94%;
+			}
+			.right7{
+				position: absolute;
+				width: 6%;
+				right: 20%;
+				top: 94%;
+			}
+			.wenzi{
+				position: absolute;
+				height: 90%;
+				left: 10%;
+				top: 2%;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="img/hua1.png" class="hua7" id="zhanshi"/>
+		<a href="index-1.html"><img src="img/home.png" class="home"/></a>
+		<img src="img/left7.png" class="left7" id="left"/>
+		<img src="img/right7.png" class="right7" id="right"/>
+		<img src="img/wenzi1.png" class="wenzi" id="zw"/>
+		<script>
+			var a=1;
+				$("#left").click(function(){
+					a--;
+					if(a<1){
+						a=7;
+					}
+					$("#zhanshi").attr("src","img/hua"+a+".png");
+				});
+				$("#right").click(function(){
+					a++;
+					if(a>7){
+						a=1;
+					}
+					$("#zhanshi").attr("src","img/hua"+a+".png");
+				});
+		</script>
+	</body>
+</html>

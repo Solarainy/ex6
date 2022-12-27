@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+		<title>饮香录</title>
+		<style>
+			html{
+				height: 100%;
+			}
+			body{
+				background-image: url("img/第3页(背景).png");
+				background-repeat: no-repeat;
+				background-position: center 0;
+				background-size:100% 100%;
+			}
+			img{
+				position: absolute;
+				width: 20%;
+			}
+			#img111{
+				width: 100%;
+				height: 100%;
+			}
+			#img1{
+				width: 20%;
+				top:-15%;
+				left: -5%;
+			}
+			#img4{
+				width: 20%;
+				top:-15%;
+				left: 85%;
+			}
+			#img5{
+				width: 20%;
+				top:-15%;
+				left: 40%;
+			}
+			#img6{
+				bottom:5%;
+				left:18%;
+			}
+			#img7{
+				bottom:5%;
+				left: 40%;
+			}
+			#img8{
+				bottom:5%;
+				left: 63%;
+			}
+			#img9{
+				bottom:5%;
+				left: 0%;
+			}
+			#img10{
+				bottom:5%;
+				left: 80%;
+			}
+			#img11{
+				width: 70%;
+				bottom:23%;
+				left: 18%;
+			}
+			#img112{
+				width: 80%;
+				bottom:50%;
+				left:10%;
+			}
+			#img113{
+				width: 20%;
+				bottom:40%;
+				left:20%;
+			}
+			#img114{
+				width: 20%;
+				bottom:40%;
+				right:20%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<a href="index-1.html"><img id="img1" src="img/第3页 按钮 (1).png" /></a>
+			<a href="index-4-1.html"><img id="img4" src="img/第3页 按钮 (4).png" /></a>
+			<span id="int1"><img id="img5" src="img/第3页 按钮 (5).png" /></span>
+		</div>
+		<div id="div2">
+			<span ><img id="img6" src="img1/花 1.png" /></span>
+			<span ><img id="img7" src="img1/花 6.png" /></span>
+			<span ><img id="img8" src="img1/花 7.png" /></span>
+		</div>
+		<div id="div3">
+			<img id="img9" src="img/第3页 按钮 (6).png" />
+			<img id="img10" src="img/第3页 按钮 (7).png" />
+		</div>
+		<div id="div4">
+			<img id="img11" src="img2/1.png" />	
+		</div>
+		<div id="div11" >
+			<img id="img111" src="img/第3页 (2).png" style="opacity: 0.9;"/>	
+			<img id="img112" src="img/第3页 (11).png" style="opacity: 0.9;"/>
+			<span id="int2" ><img id="img113" src="img/第3页 (12).png" style="opacity: 0.9;"/></span>
+			<a href="index-2.html"><img id="img114" src="img/第3页 (13).png" style="opacity: 0.9;"/></a>
+		</div>
+		
+		<script>
+			$("#img6").click(function(){
+				$("#img11").attr("src","img3/1  (1).png");
+			});
+			$("#img7").click(function(){
+				$("#img11").attr("src","img3/1  (2).png");
+			})
+			$("#img8").click(function(){
+				$("#img11").attr("src","img3/1  (3).png");
+			})
+		</script>
+		<script>
+			$("#div11").hide();
+			$("#int1").click(function(){
+			  $("#div11").show();
+			});
+			$("#int2").click(function(){
+			  $("#div11").hide();
+			});
+		</script>
+	</body>
+</html>

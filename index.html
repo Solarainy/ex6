@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+		<meta http-equiv="refresh" content="5;URL=index1.html">
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+		<title></title>
+		<style>
+			.div1{
+				margin: 0 auto;
+				height: 50px;
+				width: 400px;
+				background-color: #111;
+				border-radius: 4em;
+				display: flex; 
+				align-items: center;			
+			}
+			#div1{
+				margin: 0 auto;
+				height: 30px;
+				width: 380px;
+				background-color: antiquewhite;
+				border-radius: 4em; 
+				animation: londing 5s ease;
+			}
+			#div2{
+				font-size: 40px;
+				text-align: center;
+			}
+			#div3{
+				margin: 0 auto;
+				background-image: url("img/第3页 (2).png");
+				width: 640px;
+				height:1030px;
+				display: flex;
+				flex-direction: column;
+				align-content: center;
+				justify-content: center;
+				flex-wrap: wrap;		
+			}
+			img{
+				width: 200px;
+				animation: rot 5s linear;
+			}
+			@keyframes rot{
+				20%{
+					transform: rotate(30deg);
+				}
+				40%{
+					transform: rotate(-30deg);
+				}
+				60%{
+					transform: rotate(30deg);
+				}
+				80%{
+					transform: rotate(-30deg);
+				}
+			}
+			@keyframes londing{
+				from{
+					height: 30px;
+					width: 0px;
+				}
+				to{
+					height: 30px;
+					width: 380px;
+				}
+			}
+			#div4{
+				font-size: 40px;
+				text-align: center;
+				color: antiquewhite;
+				animation: opt 5s ease;
+			}
+			@keyframes opt{
+				
+				from{
+					font-size: 0px;
+					opacity: 0;
+				}
+				to{
+					font-size: 40px;
+					opacity: 1;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div3">
+			<div id="div11">
+				<span><img src="img/hua2.png"/></span>
+				<span><img src="img/hua1.png"/></span>
+				<span><img src="img/hua3.png"/></span>
+			</div>
+			<div id="div4">
+				欢迎来到饮香录
+			</div>
+			<div class="div1">			
+				<div id="div1"></div>
+			</div>
+		</div>
+	</body>
+</html>

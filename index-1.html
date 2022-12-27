@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>花艺长廊</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+		<style>
+			html{
+				height: 100%;
+			}
+			body{
+				background-image: url('img/background2.png');
+				background-position: center 0;
+				background-repeat: no-repeat;
+				background-size:100% 100%;
+			}
+			.zhanshi{
+				position: absolute;
+				width: 50%;
+				left: 25%;
+				top: 35%;
+				cursor: pointer;
+				transition:all 1s ease;
+			}
+			.leftbt2{
+				position: absolute;
+				width: 20%;
+				top: 50%;
+				left: 10%;
+				cursor: pointer;
+			}
+			.rightbt2{
+				position: absolute;
+				width: 20%;
+				top: 50%;
+				right: 10%;
+				cursor: pointer;
+			}
+			.button{
+				position: absolute;
+				width: 15%;
+				left: 82%;
+				top: 87%;
+			}
+			.left2{
+				position: absolute;
+				width: 25%;
+				left: 0%;
+				top:45%;
+				opacity: 50%;
+				transition:all 1s ease;
+			}
+			.right2{
+				position: absolute;
+				width: 25%;
+				right: 0%;
+				top:45%;
+				opacity: 50%;
+				transition:all 1s ease;
+			}
+			.donghua{
+				transition:all 1s ease;
+			}
+			.left1{
+				position: absolute;
+				width: 0%;
+				left: -30%;
+				top:45%;
+				opacity: 0%;
+				transition:all 1s ease;
+			}
+			.right1{
+				position: absolute;
+				width: 0%;
+				right: -30%;
+				top:45%;
+				opacity: 0%;
+				transition:all 1s ease;
+			}
+		</style>
+		<script>
+			var a=6;
+			function left(){
+				a++;
+				if(a>14){
+					a=1;
+				}
+				var b=a+1;
+				var c=b+1;
+				var d=c+1;
+				var e=d+1;
+				document.getElementById("h"+(a%7)).className="left1";
+				document.getElementById("h"+(b%7)).className="left2";
+				document.getElementById("h"+(c%7)).className="zhanshi";
+				document.getElementById("h"+(d%7)).className="right2";
+				document.getElementById("h"+(e%7)).className="right1";
+				for(var i=0;i<7;i++){
+					var name=document.getElementById("h"+i).className;
+					if(name=="left1"){
+						document.getElementById("h"+i).className="right1";
+					}
+				}
+			}
+			function right(){
+				a--;
+				if(a<1){
+					a=7;
+				}
+				var b=a+1;
+				var c=b+1;
+				var d=c+1;
+				var e=d+1;
+				document.getElementById("h"+(a%7)).className="left1";
+				document.getElementById("h"+(b%7)).className="left2";
+				document.getElementById("h"+(c%7)).className="zhanshi";
+				document.getElementById("h"+(d%7)).className="right2";
+				document.getElementById("h"+(e%7)).className="right1";
+			}
+		</script>
+	</head>
+	<body>
+		<div class="donghua">
+			<a href="index-7.html">
+				<img src="img/hua5.png" class="left1" id="h5"/>
+				<img src="img/hua6.png" class="left1" id="h6"/>
+				<img src="img/hua7.png" class="left2" id="h0"/>
+				<img src="img/hua1.png" class="zhanshi" id="h1"/>
+				<img src="img/hua2.png" class="right2" id="h2"/>
+				<img src="img/hua3.png" class="right1" id="h3"/>
+				<img src="img/hua4.png" class="right1" id="h4"/>
+			</a>
+		</div>
+		<img src="img/left2.png" class="leftbt2" onclick="left()"/>
+		<img src="img/right2.png"  class="rightbt2" onclick="right()"/>
+		<a href="index-2.html" ><img src="img/button1.png" class="button"/></a>
+	</body>
+</html>

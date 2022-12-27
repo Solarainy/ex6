@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+		<title>饮香录</title>
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+		<style>
+			#div1{
+				margin: 0 auto;
+				background-image: url("img3/背景4.png");
+				width: 640px;
+				height:1030px;
+			}
+			#img1{
+				position: absolute;
+				width: 60%;
+				left: 42%;
+				bottom: 35%;
+			}
+			#img2{
+				position: absolute;
+				width: 10%;
+				bottom: 10%;
+				left: 24%;
+			}
+		</style>
+		<script>
+			var a=1;
+			function jint(){
+				if(a>5){
+					a=1;
+				}
+				document.getElementById("img1").src="img3/5  ("+a+").png";
+				a++;
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			<div id="div11" onclick="jint()">
+				<img id="img1" src="img3/5  (1).png" />
+			</div>
+			<div>
+				<img src="img3/第8页.png" />
+			</div>
+			<div >
+				<a href="index-1.html"><img id="img2" src="img/home.png" /></a>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+		<title>饮香录</title>
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+		<style>
+			html{
+				height: 100%;
+			}
+			body{
+				background-image: url("img/第3页(背景).png");
+				background-repeat: no-repeat;
+				background-position: center 0;
+				background-size:100% 100%;
+			}
+			img{
+				position: absolute;
+				width: 20%;
+			}
+			#img111{
+				width: 100%;
+				height: 100%;
+			}
+			#img1{
+				width: 20%;
+				top:-15%;
+				left: -5%;
+			}
+			#img4{
+				width: 20%;
+				top:-15%;
+				left: 85%;
+			}
+			#img5{
+				width: 20%;
+				top:-15%;
+				left: 40%;
+			}
+			#img6{
+				bottom:5%;
+				left:18%;
+			}
+			#img7{
+				bottom:5%;
+				left: 40%;
+			}
+			#img8{
+				bottom:5%;
+				left: 63%;
+			}
+			#img9{
+				bottom:5%;
+				left: 0%;
+			}
+			#img10{
+				bottom:5%;
+				left: 80%;
+			}
+			#img11{
+				width: 70%;
+				bottom:23%;
+				left: 18%;
+			}
+			#img112{
+				width: 80%;
+				bottom:50%;
+				left:10%;
+			}
+			#img113{
+				width: 20%;
+				bottom:40%;
+				left:20%;
+			}
+			#img114{
+				width: 20%;
+				bottom:40%;
+				right:20%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<a href="index-1.html"><img id="img1" src="img/第3页 按钮 (1).png" /></a>
+			<a href="index-4-6.html"><img id="img4" src="img/第3页 按钮 (4).png" /></a>
+			<span onclick="int1()"><img id="img5" src="img/第3页 按钮 (5).png" /></span>
+		</div>
+		<div id="div2">
+			<span onclick="into1()"><img id="img6" src="img1/花 1.png" /></span>
+			<span onclick="into2()"><img id="img7" src="img1/花 2.png" /></span>
+			<span onclick="into3()"><img id="img8" src="img1/花 3.png" /></span>
+		</div>
+		<div id="div3">
+			<span onclick="last()"><img id="img9" src="img/第3页 按钮 (6).png" /></span>
+			<span onclick="next()"><img id="img10" src="img/第3页 按钮 (7).png" /></span>
+		</div>
+		<div id="div4">
+			<img id="img11" src="img2/6.png" />	
+		</div>
+		<div id="div11" style="visibility: hidden;">
+			<img id="img111" src="img/第3页 (2).png" style="opacity: 0.9;"/>	
+			<img id="img112" src="img/第3页 (11).png" style="opacity: 0.9;"/>
+			<span onclick="int2()" ><img id="img113" src="img/第3页 (12).png" style="opacity: 0.9;"/></span>
+			<a href="index-2.html"><img id="img114" src="img/第3页 (13).png" style="opacity: 0.9;"/></a>
+		</div>
+		<script>
+			var a = 0;
+			var b = 0;
+			var p1=document.getElementById("img6");
+			var p2=document.getElementById("img7");
+			var p3=document.getElementById("img8");
+			var p4=document.getElementById("img11");
+			function last(){
+				a--;
+				b--;
+				if(a<0){
+					a=0;
+				}
+				if(a==0){
+					var a1=a+1;
+					var a2=a+2;
+					var a3=a+3;
+					p1.src="img1/花 "+a1+".png";
+					p2.src="img1/花 "+a2+".png";
+					p3.src="img1/花 "+a3+".png";
+				}
+				else if(a==1){
+					var a1=a+3;
+					var a2=a+4;
+					var a3=a+5;
+					p1.src="img1/花 "+a1+".png";
+					p2.src="img1/花 "+a2+".png";
+					p3.src="img1/花 "+a3+".png";
+				}
+				
+			}
+			function next(){
+				a++;
+				b++;
+				if(a>2){
+					a=2;
+				}
+				if(b>2){
+					b=2;
+				}
+				var a1=a+3;
+				var a2=a+4;
+				var a3=a+5;
+				if(a1==4){
+					p1.src="img1/花 "+a1+".png";
+				}
+				else if(a1==5){
+					a1=7;
+					p1.src="img1/花 "+a1+".png";
+				}
+				if(a2==5){
+					p2.src="img1/花 "+a2+".png";
+				}
+				else if(a2==6){
+					a2=8;
+					p2.src="img1/花 "+a2+".png";
+				}
+				if(a3==6){
+					p3.src="img1/花 "+a3+".png";
+				}
+				else if(a3==7){
+					p3.src="";
+				}
+				
+				
+			}
+			function into1(){
+				if(b==1){
+					p4.src="img3/6  (4).png";
+				}
+				else if(b==2){
+					p4.src="img3/6  (7).png";
+				}
+				else {
+					p4.src="img3/6  (1).png";
+				}
+			}
+			function into2(){
+				if(b==1){
+					p4.src="img3/6  (5).png";
+				}
+				else if(b==2){
+					p4.src="img3/6  (8).png";
+				}
+				else{
+					p4.src="img3/6  (2).png";
+				}
+			}
+			function into3(){
+				if(b==1){
+					p4.src="img3/6  (6).png";
+				}
+				else{
+					p4.src="img3/6  (3).png";
+				}
+			}
+		</script>
+		<script>
+			function int1(){
+				document.getElementById("div11").style.visibility="visible";
+			}
+			function int2(){
+				document.getElementById("div11").style.visibility="hidden";
+			}
+		</script>
+	</body>
+</html
